@@ -6,3 +6,6 @@ RUN mkdir googlesdk && cd googlesdk
 
 RUN wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz -O - | tar -zx
 RUN google-cloud-sdk/install.sh -q --usage-reporting=false --additional-components beta
+
+RUN mkdir ../app && cd ../app
+WORKDIR /usr/src/app
